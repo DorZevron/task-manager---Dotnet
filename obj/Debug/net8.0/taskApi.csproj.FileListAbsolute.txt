@@ -32,3 +32,4 @@
 /Users/dorzevron/Private/Angular-Project/rashut-amisim/taskApi/obj/Debug/net8.0/taskApi.genruntimeconfig.cache
 /Users/dorzevron/Private/Angular-Project/rashut-amisim/taskApi/obj/Debug/net8.0/ref/taskApi.dll
 /Users/dorzevron/Private/Angular-Project/rashut-amisim/taskApi/bin/Debug/net8.0/Data/tasks.json
+/Users/dorzevron/Private/Angular-Project/rashut-amisim/taskApi/obj/Debug/net8.0/taskApi.sourcelink.json

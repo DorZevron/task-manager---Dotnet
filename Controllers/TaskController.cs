@@ -1,8 +1,5 @@
 
 using TaskApi.Models;
-// using System.Collections.Generic;
-// using System.Linq;
-// using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
@@ -13,7 +10,6 @@ namespace TaskApi.Controllers;
 [Route("api/[controller]")]
 public class TaskController : ControllerBase
 {
-    // private static List<TaskItem> taskItems = new List<TaskItem>();
         private readonly string _filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "tasks.json");
 
 
@@ -22,6 +18,18 @@ public class TaskController : ControllerBase
     {
         var tasks = LoadTasks();
         return Ok(tasks);
+    }
+
+
+    [HttpGet("{id}")]
+    public IActionResult GetTask(int id)
+    {
+        var tasks = LoadTasks();
+        var task = tasks.FirstOrDefault(t => t.Id == id);
+        if (task == null)
+            return NotFound();
+
+    return Ok(task);
     }
 
 
